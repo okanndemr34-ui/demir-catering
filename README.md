@@ -47,3 +47,8 @@ Fotoğraflar önceki siteden korunmuştur; Demir Catering'e ait çekimler değil
 ## Doğrulama
 
 Üretim derlemesi ve TypeScript kontrolü başarıyla tamamlandı. Tarayıcıda masaüstü ve 390 piksel mobil görünüm incelendi. Mobil menünün açılması ve Escape ile kapanması; menü sekmelerinin tıklama ve End tuşuyla değişmesi; seçilen menüye göre WhatsApp mesaj bağlantısının güncellenmesi kontrol edildi. Telefon bağlantıları mevcut iş numarasına yönelir. Gerçek telefon araması veya WhatsApp mesajı gönderilmedi.
+=======
+
+# demir-catering
+
+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
