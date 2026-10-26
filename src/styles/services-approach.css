@@ -1,0 +1,266 @@
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+.card-image {
+  height: 264px;
+  position: relative;
+  overflow: hidden;
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s;
+}
+.service-card:hover .card-image img {
+  transform: scale(1.07);
+}
+.card-image > span {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: var(--cream);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+}
+.card-image > b {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: var(--cream);
+  font-weight: 400;
+  font-size: 24px;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+}
+.service-card h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  font-size: 21px;
+  margin: 22px 0 12px;
+}
+.service-card p {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.9;
+  min-height: 64px;
+}
+.card-foot {
+  font-size: 8px;
+  letter-spacing: 1.4px;
+  display: block;
+  border-top: 1px solid var(--line);
+  padding-top: 17px;
+  margin-top: 24px;
+}
+.approach {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #edeee5;
+}
+.approach-photo {
+  position: relative;
+  min-height: 720px;
+  overflow: hidden;
+}
+.approach-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+.approach-photo:after {
+  content: "";
+  position: absolute;
+  inset: 50% 0 0;
+  background: linear-gradient(transparent, #16231b90);
+}
+.approach-photo > span {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  color: white;
+  z-index: 1;
+  font:
+    italic 30px "Playfair Display",
+    Georgia,
+    serif;
+}
+.approach-copy {
+  padding: 70px 11%;
+}
+.approach h2 {
+  font-size: 43px;
+}
+.approach-copy > p {
+  font-size: 12px;
+  line-height: 2;
+  color: var(--muted);
+  margin: 26px 0 27px;
+}
+.principle {
+  display: flex;
+  gap: 23px;
+  padding: 18px 0;
+  border-top: 1px solid #ced1c4;
+}
+.principle > span {
+  font:
+    italic 19px "Playfair Display",
+    Georgia,
+    serif;
+  color: var(--red);
+  padding-top: 3px;
+}
+.principle h3 {
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 0 7px;
+}
+.principle p {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 0;
+}
+.service-card:nth-child(2) {
+  transition-delay: 0.08s;
+}
+.service-card:nth-child(3) {
+  transition-delay: 0.16s;
+}
+.service-card:nth-child(4) {
+  transition-delay: 0.24s;
+}
+@media (max-width: 1050px) {
+  .card-image {
+    height: 220px;
+  }
+}
+@media (max-width: 1050px) {
+  .service-grid {
+    gap: 17px;
+  }
+}
+@media (max-width: 1050px) {
+  .service-card h3 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1050px) {
+  .approach-copy {
+    padding: 55px 8%;
+  }
+}
+@media (max-width: 1050px) {
+  .approach h2 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 1050px) {
+  .approach-photo {
+    min-height: 680px;
+  }
+}
+@media (max-width: 760px) {
+  .service-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 16px;
+  }
+}
+@media (max-width: 760px) {
+  .card-image {
+    height: 215px;
+  }
+}
+@media (max-width: 760px) {
+  .service-card h3 {
+    font-size: 19px;
+    line-height: 1.3;
+    margin-top: 16px;
+  }
+}
+@media (max-width: 760px) {
+  .service-card p {
+    font-size: 10px;
+    min-height: 75px;
+  }
+}
+@media (max-width: 760px) {
+  .card-foot {
+    font-size: 7px;
+    letter-spacing: 1px;
+    margin-top: 17px;
+  }
+}
+@media (max-width: 760px) {
+  .approach {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 760px) {
+  .approach-photo {
+    min-height: 350px;
+  }
+}
+@media (max-width: 760px) {
+  .approach-photo > span {
+    font-size: 28px;
+    left: 25px;
+    bottom: 26px;
+  }
+}
+@media (max-width: 760px) {
+  .approach-copy {
+    padding: 45px 6%;
+  }
+}
+@media (max-width: 760px) {
+  .approach h2 {
+    font-size: 37px;
+  }
+}
+@media (max-width: 380px) {
+  .card-image {
+    height: 185px;
+  }
+}
+@media (max-width: 380px) {
+  .service-card h3 {
+    font-size: 17px;
+  }
+}
+.service-card[data-service="Fuar catering"] .card-image img {
+  object-position: 35% center;
+}
+.service-card[data-service="İş yeri personel yemeği"] .card-image img {
+  object-position: 47% center;
+}
+.service-card h3 {
+  color: var(--red);
+}
+.service-card .card-image > b {
+  background: var(--red);
+  color: var(--cream);
+}
+.card-foot {
+  color: var(--red);
+  border-top-color: #c9a3a7;
+}
+.approach {
+  background: #f0e4df;
+}
+.approach h2 {
+  color: #641c27;
+}
+.principle {
+  border-top-color: #d6b7b8;
+}
