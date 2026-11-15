@@ -4,7 +4,7 @@ export default function Footer() {
       <footer id="iletisim">
         <div className="footer-top">
           <div>
-            <p className="eyebrow">BİR TELEFON KADAR YAKIN</p>
+            <p className="eyebrow">BİR TELEFON KADAR YAKINIZ</p>
             <h2>
               Güzel sofralarda
               <br />

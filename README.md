@@ -37,5 +37,3 @@ Fiyatlar `lib/catalog.js` içindedir; fiyat kartları ve hesaplayıcı bu tek ka
 ## Tasarımın korunması
 
 Masaüstü düzeni, renkler, fontlar, görseller, bölüm sırası ve çapalar korunmuştur. Mobilde form elemanlarının minimum genişliği, 320–380 px düzen, sabit alt çubuğun iOS güvenli alanı ve galeri penceresinin ekran sınırları iyileştirilmiştir.
-
-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
