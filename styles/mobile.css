@@ -1,0 +1,122 @@
+/* Contain intrinsic widths without hiding horizontal overflow or changing desktop design. */
+.hero > *,
+.services > *,
+.price-grid > *,
+.form-grid > *,
+.quote > *,
+.faq > * {
+  min-width: 0;
+}
+img {
+  max-width: 100%;
+}
+.rate-table {
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 760px) {
+  h1 {
+    font-size: clamp(43px, 7.7vw, 58px);
+  }
+  .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  input,
+  select,
+  textarea {
+    min-width: 0;
+    max-width: 100%;
+  }
+  input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+  }
+  .tabs {
+    gap: 0;
+    justify-content: space-between;
+  }
+  .tabs button {
+    min-height: 44px;
+    padding: 12px 5px;
+  }
+  .nav-toggle,
+  .mobile-bar a {
+    min-height: 44px;
+  }
+  .offer > div {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .hero-photo {
+    min-height: 420px;
+  }
+  .hero-foot {
+    flex-wrap: wrap;
+  }
+  .phone,
+  .footer-phone {
+    white-space: nowrap;
+    font-size: clamp(21px, 6vw, 26px);
+  }
+  .price-card {
+    padding: 24px 18px;
+  }
+  .rate-table th,
+  .rate-table td {
+    overflow-wrap: normal;
+  }
+  dialog {
+    max-width: calc(100vw - 24px);
+    max-height: calc(100dvh - 24px);
+  }
+  dialog img {
+    max-width: 100%;
+    max-height: calc(100dvh - 90px);
+  }
+  #close-dialog {
+    min-height: 32px;
+    padding: 4px 8px;
+  }
+  footer {
+    padding-bottom: calc(90px + env(safe-area-inset-bottom));
+  }
+  .topline > span {
+    flex: 1;
+    min-width: 0;
+  }
+  .top-phones {
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 380px) {
+  .form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .hero-copy {
+    padding-inline: 6%;
+  }
+  .hero-foot {
+    font-size: 7px;
+    gap: 8px;
+  }
+  .tabs button {
+    font-size: 10px;
+  }
+  .posters {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .posters button:last-child {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+/* Explicit intrinsic image dimensions prevent layout shifts; established fixed crops win. */
+.custom-event img,
+.new-food-gallery img {
+  height: auto;
+}

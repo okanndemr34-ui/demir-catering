@@ -1,5 +1,6 @@
 node_modules/
 .next/
 out/
-.openai/.local/
-*.tsbuildinfo
+.sites/
+*.zip
+*.tar.gz

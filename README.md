@@ -1,54 +1,41 @@
-# Demir Catering — Next.js
+# Demir Catering — Next.js kaynak kodu
 
-Mevcut bordo/krem tasarım korunarak Next.js App Router ve TypeScript ile yeniden oluşturulmuş tek sayfa tema.
+Mevcut siyah/kırmızı tasarım ve tüm kampanya/iletişim bilgileri korunarak Next.js App Router ile hazırlanmıştır. Sunucuya ihtiyaç duymayan statik çıktı üretir.
 
-## Başlatma
+## Çalıştırma
 
-Node.js 20.9 veya üzeri gerekir. Node.js 24 LTS önerilir.
+Node.js 22.9+ (önerilen: 24 LTS).
 
 ```sh
 npm ci
 npm run dev
-```
-
-Geliştirme adresi: http://localhost:3000
-
-```sh
+npm test
 npm run build
-npm run typecheck
-npm run preview
 ```
 
-Üretim için `out/` klasörü oluşur; herhangi bir statik sunucuya yüklenebilir. Bu proje gerçek Next.js kullanır. Sunucu API'si gerektirmeyen bu tanıtım sayfası statik çıktı verir.
+Üretim çıktısı `out/` klasörüdür. İstediğiniz statik sunucuda yayımlanabilir. Geliştirme sunucusu `http://localhost:3000` adresindedir.
 
-## Dosya düzeni
+## Dosya yapısı
 
-- `src/app/`: ana sayfa, genel yerleşim ve SEO bilgileri.
-- `src/components/`: Header, Hero, Ticker, Services, Approach, Menus, Contact, Faq, Closing, Footer; ayrıca Reveal ve PlateMark ortak bileşenleri.
-- `src/data/`: iletişim, gezinme, menüler, hizmetler ve sık sorulan sorular.
-- `src/styles/`: temel tema ve bölüm bazında ayrılmış CSS.
-- `scripts/`: geliştirme ve üretim çıktısını önizleme komutları.
-- `public/assets/`: logo ve mevcut fotoğraflar.
+- `app/`: sayfa, ana layout, metadata, robots, sitemap ve 404.
+- `components/`: başlık, hizmetler, menü sekmeleri, fiyat kartları, teklif formu, galeri ve alt bilgi.
+- `lib/catalog.js`: menü fiyatları ve iletişim bilgileri.
+- `lib/pricing.js`: kişi aralıkları, tanışma/normal tarife ve tasarruf hesabı.
+- `lib/whatsapp.js`: mesaj oluşturma ve güvenli hedef numarası seçimi.
+- `lib/seo.js`: doğrulanmış işletme bilgileriyle Organization, Service ve FAQ yapılandırılmış verileri.
+- `styles/site.css`: korunmuş mevcut tasarım.
+- `styles/mobile.css`: dar ekran, form, tablo ve güvenli alan düzeltmeleri.
+- `public/assets/`: özgün logo, afişler ve örnek yemek sunumları.
+- `tests/`: tarife sınırları ve WhatsApp mesaj testleri.
 
-Telefon ve WhatsApp bilgileri `src/data/site.ts` dosyasından değiştirilir. Menüler `src/data/menus.ts`, hizmetler `src/data/services.ts`, SSS `src/data/faqs.ts` dosyalarından düzenlenir. Mevcut tasarımın yazı tipleri `public/fonts/` içinde yerel olarak sunulur. Google Fonts bağlantısına ihtiyaç duyulmaz; lisans metinleri aynı klasördedir. Georgia ve sans-serif yedekleri korunmuştur.
+## İçerik ve SEO
 
-## Tek sayfa davranışı
+Alan adı değişirse `lib/site.js` içindeki `url` alanını güncelleyin; canonical, sitemap ve sosyal paylaşım adresleri buradan türetilir. SEO meta verileri ve tüm menüler ilk HTML yanıtında yer alır. Schema FAQ verileri arama sonuçlarında zengin görünüm garantisi vermez. Dizine eklenme ve sıralama arama motoruna bağlıdır.
 
-Tüm bölümler aynı `/` sayfasındadır. `#hizmetler`, `#yaklasim`, `#menuler`, `#teklif` bağlantıları korunur. Sabit başlık için kaydırma payı, aktif bölüm vurgusu, mobil menü kapatma, Escape ve dışarı tıklama desteği bulunur. Menü sekmeleri ok tuşları, Home/End ve Tab ile kullanılabilir. Kaydırma animasyonları azaltılmış hareket tercihini dikkate alır. JavaScript çalışmasa da statik içerik görünür kalır.
+Fiyatlar `lib/catalog.js` içindedir; fiyat kartları ve hesaplayıcı bu tek kaynaktan beslenir. SSS metinleri ve SSS şeması `lib/faq.js` kaynağını paylaşır. Form veri saklamaz; WhatsApp mesajını hazırlar, son gönderimi ziyaretçi yapar.
 
-## İletişim
+## Tasarımın korunması
 
-Arama ve WhatsApp bağlantıları `0530 556 32 61` numarasına yönelir. WhatsApp mesajı kullanıcı onayıyla gönderilir; sayfada form veya rezervasyon veritabanı bulunmaz.
-
-## Fotoğraflar
-
-Fotoğraflar önceki siteden korunmuştur; Demir Catering'e ait çekimler değildir. Kaynak bağlantıları Footer bileşenindedir. Kendi çekimlerinizle değiştirmek için `public/assets/` ve ilgili veri kaydını güncelleyin. Görsel kullanım hakları için kaynak sahipleriyle lisans durumunu teyit edin.
-
-## Doğrulama
-
-Üretim derlemesi ve TypeScript kontrolü başarıyla tamamlandı. Tarayıcıda masaüstü ve 390 piksel mobil görünüm incelendi. Mobil menünün açılması ve Escape ile kapanması; menü sekmelerinin tıklama ve End tuşuyla değişmesi; seçilen menüye göre WhatsApp mesaj bağlantısının güncellenmesi kontrol edildi. Telefon bağlantıları mevcut iş numarasına yönelir. Gerçek telefon araması veya WhatsApp mesajı gönderilmedi.
-=======
-
-# demir-catering
+Masaüstü düzeni, renkler, fontlar, görseller, bölüm sırası ve çapalar korunmuştur. Mobilde form elemanlarının minimum genişliği, 320–380 px düzen, sabit alt çubuğun iOS güvenli alanı ve galeri penceresinin ekran sınırları iyileştirilmiştir.
 
 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
